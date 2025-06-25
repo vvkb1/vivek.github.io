@@ -1,0 +1,115 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY: Apple-style font + dark mode */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* NAV BAR */
+nav {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+}
+
+/* LEFT NAV LINKS */
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 1.1em;
+  margin: 0 15px;
+  transition: color 0.2s ease;
+}
+.nav-left a,
+.nav-right a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 1.1em;
+  margin: 0 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-left a::after,
+.nav-right a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #ffffff;
+}
+
+.nav-left a:hover::after,
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-left {
+    display: none;
+  }
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 30px; /* Controls space BETWEEN links */
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .nav-right a {
+    margin: 0; /* Remove leftover margin that was causing the column gaps */
+    padding: 5px 10px;
+    font-size: 1.1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main h1 {
+    font-size: 2rem;
+  }
+
+  main p {
+    font-size: 1.1rem;
+  }
+}
+
+/* MAIN CONTENT */
+main {
+  max-width: 700px;
+  padding: 0 20px;
+  align-items: left
+}
+
